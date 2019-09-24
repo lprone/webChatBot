@@ -20,6 +20,13 @@
             crossorigin="anonymous">
     </script>
     <script src="chat.js"></script>
+    <script>
+        function handleKeyUp(e) {
+            if (e.key === "Enter") {
+                send();
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -33,7 +40,7 @@
         </div>
         <br>
         <div class="input-group">
-            <input class="form-control" id="message" placeholder="Message" type="text">
+            <input class="form-control" id="message" placeholder="Message" type="text" onkeyup="handleKeyUp(event)">
             <div class="input-group-append">
                 <button id="send" class="btn btn-outline-secondary" title=">" type="button" onclick="send()">
                     Send

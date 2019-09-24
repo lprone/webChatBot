@@ -16,7 +16,7 @@ function send() {
     message.value = "";
 
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url, false);
+    xmlHttp.open("GET", url, false);
     xmlHttp.send();
     chat.value = addMessageFromBot(chat.value, xmlHttp.response);
 }
